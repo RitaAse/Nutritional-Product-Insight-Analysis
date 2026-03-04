@@ -87,15 +87,31 @@ While the initial EDA focused on understanding nutrient distributions and compar
 The full technical implementation is available in the Jupyter Notebook:
 👉 `Fruityvice Analysis.ipynb`
 
-To run locally:
+How to run the project:
 ```Python
+1. Setup the environment
+
+# Clone the repository
+git clone <the-repository-url>
+cd Nutritional-Product-Insight-Analysis
+
+# Create a virtual environment (recommended)
+python -m venv env
+
+# Activate the environment
+# Windows:
+  env\Scripts\activate
+# Mac/Linux:
+  source env/bin/activate
+
+# Install required packages
 pip install -r requirements.txt
+
+2. Open and run notebook
+
+# Launch VS Code of Jupyter lab and run all
+# Run the cells to reproduce the analysis and visualizations.
 ```
-Required libraries include:
-- pandas
-- requests
-- matplotlib
-- seaborn
 
 ### Results
 
