@@ -11,20 +11,32 @@
 - [Personalized Insights](#personalized-insights)
 - [Implementation](#implementation)
 - [Results](#results)
+- [Business Impact](#business-impact)
 - [Recommendations](#recommendations)
 - [Limitations](#limitations)
 - [References](#references)
-- [Business Impact](#business-impact)
+
 
 ### Project Overview
 
 This project analyzes fruit nutritional data to uncover patterns that support product development and marketing decisions. The analysis seeks to improve understanding of product-level nutritional positioning and helps inform personalization strategies for different consumer needs.
 
 ### Data Sources
-Nutritional data was obtained through the Fruityvice API. The API provided nutritional information for a wide variety of fruits. 
+Nutritional data was obtained through the Fruityvice API. The API provided nutritional information for a wide variety of fruits. A CSV snapshot is also included for reproducibility if the API is unavailable. 
 
 ### Dataset characteristics
-A table showing column headings and what they mean
+| Column Name      | Description |
+|------------------|------------|
+| `name`           | Name of the fruit |
+| `id`             | Unique identifier assigned to the fruit in the API |
+| `family`         | Botanical family the fruit belongs to |
+| `order`          | Botanical order classification |
+| `genus`          | Botanical genus classification |
+| `calories`       | Energy content per 100g (in kcal) |
+| `fat`            | Total fat content per 100g (in grams) |
+| `sugar`          | Total sugar content per 100g (in grams) |
+| `carbohydrates`  | Total carbohydrate content per 100g (in grams) |
+| `protein`        | Protein content per 100g (in grams) |
 
 ### Tools
 - Python – Programming language used for data acquisition, data cleaning and exploratory data analysis
@@ -37,7 +49,7 @@ A table showing column headings and what they mean
 
 ### Data Preparation
 
-To ensure the data was suitable for ana,ysis, the following tasks were performed:
+To ensure the data was suitable for analysis, the following tasks were performed:
 
 1. API Data Retrieval & Initial Inspection – Retrieved fruit data from the Fruityvice API and reviewed the JSON structure.
 2. Data Structuring - Converted nested JSON responses into a structured Pandas DataFrame.
@@ -45,7 +57,7 @@ To ensure the data was suitable for ana,ysis, the following tasks were performed
 4. Outlier Detection - Reviewed extreme nutritional values to ensure data reliability.
 5. Data Formatting - Standardized column names and ensured appropriate data types for numerical analysis.
 
-Note: An outlier was observed in the nutrient distributions. A correlation matrix was not performed because the different nutrients (e.g., calories vs. grams) have varying units, which could produce misleading correlations.
+Note: An outlier was observed in the nutrient distributions. A correlation matrix was not performed because nutrients are measured in different units (e.g., calories vs. grams), which could lead to misleading interpretations.
 
 ### Exploratory Data Analysis
 
@@ -70,13 +82,19 @@ While the initial EDA focused on understanding nutrient distributions and compar
 
 ### Implementation
 
+The full technical implementation is available in the Jupyter Notebook:
+👉 `Fruityvice Analysis.ipynb`
+
+To run locally:
 ```Python
 pip install -r requirements.txt
-
-import numpy
-import pandas as pd
-import requests
 ```
+Required libraries include:
+- pandas
+- requests
+- matplotlib
+- seaborn
+
 ### Results
 
 1. Sugar extremes: Jackfruit has high sugar, while gooseberry is naturally low — useful for health-conscious product positioning.
@@ -86,6 +104,20 @@ import requests
 5. Purpose-based segmentation: Analysis supports categorization of fruits for different consumer needs (weight management, diabetes-conscious, fitness-focused), providing a framework for product positioning and personalized marketing.
 
 Note: More detailed tables, rankings, and visualizations are available here [Fruityvice Analysis.ipynb](linkhere)
+
+### Business Impact
+
+The analysis strengthens strategic decision-making by transforming raw nutritional data into structured, comparable insights. Specifically, it contributes in the following ways:
+
+Improved Nutritional Visibility – Provides a clearer overview of how fruits differ across key metrics such as sugar, calories, protein, and fat.
+
+Category-Level Positioning Insight – Enables comparison across fruit groups (e.g., genus-level aggregation), supporting better product-level positioning decisions.
+
+Health-Oriented Segmentation Support – Structures nutritional attributes in a way that aligns with different consumer lifestyle goals (e.g., weight management, fitness focus, sugar-conscious consumers).
+
+Data-Informed Personalization Enablement – Makes it easier for marketing and product teams to tailor messaging and highlight relevant nutritional strengths for specific target audiences.
+
+Reduced Decision Complexity – Summarizes complex nutritional patterns into visual and structured formats, supporting faster and more confident decision-making.
 
 ### Recommendations
 Based on the analysis, fruit companies and product teams can consider the following:
@@ -107,16 +139,3 @@ Future work could integrate multiple data sources, expand nutrient coverage, and
 - Python (Pandas, Matplotlib, Seaborn) – Data analysis and visualization tools
 - [Hazelnut calories check](https://foods.fatsecret.com/calories-nutrition/usda/hazelnuts-or-filberts-nuts?portionid=59802&portionamount=100.000)
 
-### Business Impact
-
-The analysis strengthens strategic decision-making by transforming raw nutritional data into structured, comparable insights. Specifically, it contributes in the following ways:
-
-Improved Nutritional Visibility – Provides a clearer overview of how fruits differ across key metrics such as sugar, calories, protein, and fat.
-
-Category-Level Positioning Insight – Enables comparison across fruit groups (e.g., genus-level aggregation), supporting better product-level positioning decisions.
-
-Health-Oriented Segmentation Support – Structures nutritional attributes in a way that aligns with different consumer lifestyle goals (e.g., weight management, fitness focus, sugar-conscious consumers).
-
-Data-Informed Personalization Enablement – Makes it easier for marketing and product teams to tailor messaging and highlight relevant nutritional strengths for specific target audiences.
-
-Reduced Decision Complexity – Summarizes complex nutritional patterns into visual and structured formats, supporting faster and more confident decision-making.
