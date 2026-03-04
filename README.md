@@ -1,10 +1,26 @@
 # Nutritional-Product-Insight-Analysis
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Data Sources](#data-sources)
+- [Dataset Characteristics](#dataset-characteristics)
+- [Tools](#tools)
+- [Data Preparation](#data-preparation)
+- [Exploratory Data Analysis](#exploratory-data-analysis)
+- [Personalized Insights](#personalized-insights)
+- [Implementation](#implementation)
+- [Results](#results)
+- [Recommendations](#recommendations)
+- [Limitations](#limitations)
+- [References](#references)
+- [Business Impact](#business-impact)
+
 ### Project Overview
 
 This project analyzes fruit nutritional data to uncover patterns that support product development and marketing decisions. The analysis seeks to improve understanding of product-level nutritional positioning and helps inform personalization strategies for different consumer needs.
 
-### Data sources
+### Data Sources
 Nutritional data was obtained through the Fruityvice API. The API provided nutritional information for a wide variety of fruits. 
 
 ### Dataset characteristics
@@ -19,7 +35,7 @@ A table showing column headings and what they mean
 
 - Matplotlib & Seaborn – Visualization of patterns, trends, and comparative distributions
 
-### Data Cleaning/Preparation
+### Data Preparation
 
 To ensure the data was suitable for ana,ysis, the following tasks were performed:
 
@@ -61,7 +77,7 @@ import numpy
 import pandas as pd
 import requests
 ```
-### Results/Findings
+### Results
 
 1. Sugar extremes: Jackfruit has high sugar, while gooseberry is naturally low — useful for health-conscious product positioning.
 2. High-protein fruits for fitness: Hazelnut, dragonfruit, guava, passion fruit, and avocado are relatively higher in protein, with hazelnut being particularly calorie-dense (important for portion guidance).
@@ -83,9 +99,14 @@ Based on the analysis, fruit companies and product teams can consider the follow
 ### Limitations
 1. Limited Data Scope – The analysis relies entirely on the Fruityvice API, which may not include all fruits or the latest nutritional information. For instance, nutrients like vitamins and minerals were not included
 2. No Direct Health Recommendations - While nsights are for decision support and product positioning only, they are not medical or dietary advice.
-3. 
 
 Future work could integrate multiple data sources, expand nutrient coverage, and incorporate consumer preference or regional availability data to enhance product insights.
+
+### References
+- Fruityvice API - Nutritional fruit data
+- Python (Pandas, Matplotlib, Seaborn) – Data analysis and visualization tools
+- [Hazelnut calories check](https://foods.fatsecret.com/calories-nutrition/usda/hazelnuts-or-filberts-nuts?portionid=59802&portionamount=100.000)
+
 ### Business Impact
 
 The analysis strengthens strategic decision-making by transforming raw nutritional data into structured, comparable insights. Specifically, it contributes in the following ways:
