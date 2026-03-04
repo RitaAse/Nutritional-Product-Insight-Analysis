@@ -1,0 +1,11 @@
+Before running the notebook:
+
+Ensure Python 3.x is installed.
+
+Install the required packages (can use pip install -r requirements.txt).
+
+The notebook retrieves live data from the Fruityvice API — ensure an internet connection.
+
+Run cells sequentially to reproduce all analyses, visualizations, and segmentation insights.
+
+Tip: The notebook is structured to first perform data retrieval and cleaning, then exploratory data analysis, followed by purpose-based segmentation and visualization of nutritional patterns.
