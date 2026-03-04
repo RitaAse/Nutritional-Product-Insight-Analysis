@@ -7,6 +7,9 @@ This project analyzes fruit nutritional data to uncover patterns that support pr
 ### Data sources
 Nutritional data was obtained through the Fruityvice API. The API provided nutritional information for a wide variety of fruits. 
 
+### Dataset characteristics
+A table showing column headings and what they mean
+
 ### Tools
 - Python – Programming language used for data acquisition, data cleaning and exploratory data analysis
 
@@ -26,6 +29,8 @@ To ensure the data was suitable for ana,ysis, the following tasks were performed
 4. Outlier Detection - Reviewed extreme nutritional values to ensure data reliability.
 5. Data Formatting - Standardized column names and ensured appropriate data types for numerical analysis.
 
+Note: An outlier was observed in the nutrient distributions. A correlation matrix was not performed because the different nutrients (e.g., calories vs. grams) have varying units, which could produce misleading correlations.
+
 ### Exploratory Data Analysis
 
 EDA involved exploring the nutritional fruit data to answer key questions, such as:
@@ -39,19 +44,48 @@ EDA involved exploring the nutritional fruit data to answer key questions, such 
 7. Genus-level aggregation - Create a pivot table that shows the average sugar content of fruits grouped by their genus.
 
 ### Personalized Insights
+
 While the initial EDA focused on understanding nutrient distributions and comparative patterns, a deeper analysis was conducted to explore how these nutritional attributes align with different consumer health needs. The analysis considered example consumer categories such as:
 
-1. Weight loss Focus – Fruits with lower calorie values
-
+1. Weight loss Focus – Fruits with lower calorie values\
 2. Diabetes-Conscious Consumers – Fruits with lower sugar content
-
 3. Fitness-Oriented Consumers – Fruits with relatively higher protein content
-
 4. Plant-Based / Vegetarian Diets – Nutrient-dense fruits supporting balanced intake
 
+### Implementation
 
+```Python
+pip install -r requirements.txt
 
+import numpy
+import pandas as pd
+import requests
+```
+### Results/Findings
 
+1. Sugar extremes: Jackfruit has high sugar, while gooseberry is naturally low — useful for health-conscious product positioning.
+2. High-protein fruits for fitness: Hazelnut, dragonfruit, guava, passion fruit, and avocado are relatively higher in protein, with hazelnut being particularly calorie-dense (important for portion guidance).
+3. Low-fat options: Persimmon, pomelo, melon, cranberry, lime, and green apple stand out as low-fat fruits for general health-focused marketing.
+4. Berries: Certain berries like blueberry, cranberry, and gooseberry offer low-sugar, nutrient-dense alternatives for targeted consumer segments.
+5. Purpose-based segmentation: Analysis supports categorization of fruits for different consumer needs (weight management, diabetes-conscious, fitness-focused), providing a framework for product positioning and personalized marketing.
+
+Note: More detailed tables, rankings, and visualizations are available here [Fruityvice Analysis.ipynb](linkhere)
+
+### Recommendations
+Based on the analysis, fruit companies and product teams can consider the following:
+
+1. Targeted Product Positioning – Use nutrient profiles to tailor fruits for different consumer needs, e.g., low-calorie fruits for weight-conscious consumers and protein-rich options for fitness-focused segments.
+2. Balanced Product Combinations – For products containing higher-calorie, high-protein fruits like hazelnut, combine them with lower-calorie fruits such as dragonfruit, guava, or passion fruit to create balanced options.
+3. Marketing Segmentation – Highlight specific nutritional attributes (low sugar, high protein, low fat) in marketing campaigns to appeal to distinct consumer groups.
+4. Category-Level Insights – Use genus-level sugar or nutrient patterns to design product bundles or create specialized fruit mixes for targeted health or lifestyle goals.
+5. Decision Support – Continue using structured data analysis to identify emerging patterns, optimize ingredient proportions, and guide future product development.
+
+### Limitations
+1. Limited Data Scope – The analysis relies entirely on the Fruityvice API, which may not include all fruits or the latest nutritional information. For instance, nutrients like vitamins and minerals were not included
+2. No Direct Health Recommendations - While nsights are for decision support and product positioning only, they are not medical or dietary advice.
+3. 
+
+Future work could integrate multiple data sources, expand nutrient coverage, and incorporate consumer preference or regional availability data to enhance product insights.
 ### Business Impact
 
 The analysis strengthens strategic decision-making by transforming raw nutritional data into structured, comparable insights. Specifically, it contributes in the following ways:
