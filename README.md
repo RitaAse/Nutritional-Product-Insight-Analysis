@@ -18,8 +18,10 @@
 
 
 ### Project Overview
-
+---
 This project analyzes fruit nutritional data to uncover patterns that support product development and marketing decisions. The analysis seeks to improve understanding of product-level nutritional positioning and helps inform personalization strategies for different consumer needs.
+
+<img width="890" height="1389" alt="sugar distribution across fruits" src="https://github.com/user-attachments/assets/da9a2429-e29d-402c-8551-1877bbe2c5ae" />
 
 ### Data Sources
 Nutritional data was obtained through the Fruityvice API. The API provided nutritional information for a wide variety of fruits. A CSV snapshot is also included for reproducibility if the API is unavailable. 
