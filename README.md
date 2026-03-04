@@ -105,7 +105,7 @@ Required libraries include:
 4. Berries: Certain berries like blueberry, cranberry, and gooseberry offer low-sugar, nutrient-dense alternatives for targeted consumer segments.
 5. Purpose-based segmentation: Analysis supports categorization of fruits for different consumer needs (weight management, diabetes-conscious, fitness-focused), providing a framework for product positioning and personalized marketing.
 
-Note: More detailed tables, rankings, and visualizations are available here [Fruityvice Analysis.ipynb](linkhere)
+Note: More detailed tables, rankings, and visualizations are available here `Fruityvice Analysis.ipynb`
 
 ### Business Impact
 
