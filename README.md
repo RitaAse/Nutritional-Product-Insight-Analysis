@@ -92,7 +92,7 @@ How to run the project:
 1. Setup the environment
 
 # Clone the repository
-git clone <the-repository-url>
+git clone https://github.com/RitaAse/Nutritional-Product-Insight-Analysis
 cd Nutritional-Product-Insight-Analysis
 
 # Create a virtual environment (recommended)
